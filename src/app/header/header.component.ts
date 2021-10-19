@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,12 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private http: HttpClient) {}
+  base_path = 'http://localhost:8000/';
+
+  constructor() {}
 
   ngOnInit(): void {}
-
-  loginWithGoogle() {
-    window.location.replace('http://localhost:3000/auth/');
-    // window.open('http://localhost:3000/auth/');
-  }
 }
